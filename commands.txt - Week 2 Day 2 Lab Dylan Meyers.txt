@@ -1,0 +1,52 @@
+Part I: Set the Scene
+cd ~
+cd Desktop/
+mkdir galaxy-far-far-away
+cd galaxy-far-far-away/
+touch.commands.txt
+mkdir death_star tatooine millenium_falcon && mv millenium_falcon tatooine/millenium_falcon
+cd death_star/
+touch darth_vader.txt princess_leia.txt storm_trooper.txt
+cd..
+cd tatooine/
+touch luke.txt ben_kenobi.txt
+cd..
+cd millenium_falcon/
+touch han_solo.txt chewbaca.txt
+
+
+Part II: MV - Rename
+cd.. ( to ~/Documents/galaxy-far-far-away)
+mv tatooine/ben_kenobi.txt tatooine/obi_wan.txt
+
+
+Part III: CP - Copy
+cp death_star/storm_trooper.txt tatooine/
+ls tatooine/
+luke.txt  obi_wan.txt  storm_trooper.txt
+
+OR 
+
+if cd into Tattooine (~/Documents/galaxy-far-far-away/tatooine)
+cp ../death_star/storm_trooper.txt .
+
+
+Part IV: MV - Move
+cd .. ( to ~/Documents/galaxy-far-far-away) 
+mv tatooine/luke.txt tatooine/millenium_falcon/ && mv tatooine/obi_wan.txt tatooine/millenium_falcon/
+mv tatooine/millenium_falcon/ .
+mv millenium_falcon/ death_star/
+mv death_star/princess_leia.txt death_star/millenium_falcon/
+
+Part V: RV - Remove
+rm death_star/millenium_falcon/obi_wan.txt
+
+Part VI: all together ( still in ~/Documents/galaxy-far-far-away )
+mkdir yavin_4 && mv death_star/millenium_falcon/ ./yavin_4
+mkdir yavin_4/x_wing
+mv yavin_4/millenium_falcon/princess_leia.txt yavin_4 && mv yavin_4/millenium_falcon/luke.txt yavin_4/x_wing/
+mv yavin_4/millenium_falcon/ yavin_4/x_wing/ .
+mkdir -p death_star/{tie_fighter_1,tie_fighter_2,tie_fighter_3}
+
+
+
